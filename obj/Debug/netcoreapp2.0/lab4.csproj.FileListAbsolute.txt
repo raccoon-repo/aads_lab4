@@ -1,0 +1,11 @@
+/home/quiet_enough/Programming/nure/AD/lab4/lab4/bin/Debug/netcoreapp2.0/lab4.deps.json
+/home/quiet_enough/Programming/nure/AD/lab4/lab4/bin/Debug/netcoreapp2.0/lab4.runtimeconfig.json
+/home/quiet_enough/Programming/nure/AD/lab4/lab4/bin/Debug/netcoreapp2.0/lab4.runtimeconfig.dev.json
+/home/quiet_enough/Programming/nure/AD/lab4/lab4/bin/Debug/netcoreapp2.0/lab4.dll
+/home/quiet_enough/Programming/nure/AD/lab4/lab4/bin/Debug/netcoreapp2.0/lab4.pdb
+/home/quiet_enough/Programming/nure/AD/lab4/lab4/obj/Debug/netcoreapp2.0/lab4.csprojResolveAssemblyReference.cache
+/home/quiet_enough/Programming/nure/AD/lab4/lab4/obj/Debug/netcoreapp2.0/lab4.csproj.CoreCompileInputs.cache
+/home/quiet_enough/Programming/nure/AD/lab4/lab4/obj/Debug/netcoreapp2.0/lab4.AssemblyInfoInputs.cache
+/home/quiet_enough/Programming/nure/AD/lab4/lab4/obj/Debug/netcoreapp2.0/lab4.AssemblyInfo.cs
+/home/quiet_enough/Programming/nure/AD/lab4/lab4/obj/Debug/netcoreapp2.0/lab4.dll
+/home/quiet_enough/Programming/nure/AD/lab4/lab4/obj/Debug/netcoreapp2.0/lab4.pdb
