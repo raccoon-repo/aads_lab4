@@ -9,9 +9,8 @@ namespace lab4.Graphs
 {
     public class GraphWeighted
     {
-        
         private Dictionary<char, Dictionary<char, int>> _graph;
-        
+
         public int Count { get; private set; }
 
         public GraphWeighted(Dictionary<char, Dictionary<char, int>> graph)
@@ -21,10 +20,7 @@ namespace lab4.Graphs
         }
 
 
-        /**
-         * Finds the least path in graph
-         * from vertex `from` to vertex `to`
-         */
+        
         public int Dijkstra(char from, char to)
         {
             var set = Dijkstra(from);
@@ -42,21 +38,20 @@ namespace lab4.Graphs
          */
         public HashSet<Path> Dijkstra(char from)
         {
-            var queue = new UpdatablePriorityQueue<Path>();
-
             if (_graph.Count == 0)
                 return null;
             
-           
-            var paths = new HashSet<Path>();
+            var queue = new UpdatablePriorityQueue<Path>();
             var visited = new HashSet<char>();
-            
+            var paths = new HashSet<Path>();
+
             queue.Enqueue(new Path(from, from, 0));
             
             while (!queue.IsEmpty())
             {
                 var path = queue.Dequeue();
                 
+                // get all adjacent vertecies for current vertex
                 _graph.TryGetValue(path.To, out var edges);
                 foreach (var edge in edges)
                 {
@@ -64,11 +59,16 @@ namespace lab4.Graphs
                         continue;
                     
                     var tPath = new Path(from, edge.Key, path.Value + edge.Value);
-
+                    
                     if (!paths.Add(tPath))
                     {
+                        // get old value of the path
                         paths.TryGetValue(tPath, out var tPath2);
-
+                        
+                        // update priority in queue and 
+                        // replace paths if value of the current path is less
+                        // than previously found path from vertex `from`
+                        // to current vertex
                         if (tPath.Value < tPath2.Value)
                         {
                             queue.Update(tPath, tPath);
