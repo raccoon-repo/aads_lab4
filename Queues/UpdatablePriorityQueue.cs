@@ -36,8 +36,8 @@ namespace lab4.Queues
 
         public void Enqueue(TElement element)
         {
-            _size++;
             _maxHeap.Push(element);
+            _size++;
         }
 
         public bool Contains(TElement element)

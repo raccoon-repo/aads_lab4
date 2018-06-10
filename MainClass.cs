@@ -5,10 +5,11 @@ using lab4.Graphs;
 
 namespace lab4
 {
-    public class Class1
+    public class MainClass
     {
         public static void Main(string[] args)
         {
+                        
             var vertices = new Dictionary<char, Dictionary<char, int>>() {
                 {'A', new Dictionary<char, int>() {
                     {'E', 5}, {'D', 10}, {'B', 7}
@@ -47,8 +48,15 @@ namespace lab4
                 }}
             };
             
-            GraphWeighted graph = new GraphWeighted(vertices);
-
+            var graph = new GraphWeighted(vertices);
+            graph.Printer = new ConsoleGraphPrinter();
+            var kruskal = graph.Kruskal();
+            kruskal.Printer = graph.Printer;
+            kruskal.Print();
+            var prim = graph.PrimSarAdj();
+            Console.WriteLine();
+            
+            graph.Printer.Print(new GraphWeighted(prim));
         }
     }
 }
